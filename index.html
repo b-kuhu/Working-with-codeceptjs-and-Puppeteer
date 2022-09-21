@@ -10,7 +10,6 @@
       .login-form {
         display: flex;
         flex-direction: column;
-        align-items: center;
       }
 
       .login-form label {
@@ -26,6 +25,7 @@
       }
 
       .login-form button {
+        width: 100px;
         padding: 10px 20px;
         background-color: rgb(39, 89, 138);
         border: 1px solid #ddd;
@@ -43,14 +43,22 @@
     <form class="login-form" action="/action_page.php">
       <div>
         <label for="name">Name:</label>
-        <input type="name" id="name" placeholder="Enter Name" name="name" />
+        <input type="name" id="name" placeholder="Enter Name" name="Name" />
       </div>
       <div>
         <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Enter email" name="email" />
+        <input type="email" id="email" placeholder="Enter email" name="Email" />
       </div>
-      <label> <input type="checkbox" name="remember" /> Remember me </label>
-      <button type="submit">Submit</button>
+      <div>
+        <label for="role">Role:</label>
+
+        <select name="role" id="role">
+          <option value="admin">Admin</option>
+          <option value="user">user</option>
+        </select>
+      </div>
+      <label> <input type="checkbox" name="Accept" />Accept</label>
+      <button type="submit">Login</button>
     </form>
   </body>
 </html>
