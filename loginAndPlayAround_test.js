@@ -6,6 +6,15 @@ I.fillField("Name","kuhu");
 I.fillField("Email","123@gmail.com");
 I.selectOption('Role','Admin');
 I.checkOption('Accept');
-I.click("//input[@type='login");
+I.click('Login');
+
+I.seeInCurrentUrl('/index.html');
+
+pause();
+
+//ASSERTIONS
+I.see('Login');
+I.seeElement('.login-form');
+I.dontSeeElement('.error');
 
 });
