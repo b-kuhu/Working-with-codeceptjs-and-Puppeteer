@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .login-form label {
+        margin: 5px 10px 5px 0;
+      }
+
+      .login-form input {
+        vertical-align: middle;
+        margin: 5px 10px 5px 0;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid black;
+      }
+
+      .login-form button {
+        padding: 10px 20px;
+        background-color: rgb(39, 89, 138);
+        border: 1px solid #ddd;
+        color: white;
+      }
+
+      .login-form button:hover {
+        background-color: royalblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login</h2>
+
+    <form class="login-form" action="/action_page.php">
+      <div>
+        <label for="name">Name:</label>
+        <input type="name" id="name" placeholder="Enter Name" name="name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email" name="email" />
+      </div>
+      <label> <input type="checkbox" name="remember" /> Remember me </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
