@@ -1,6 +1,9 @@
+const assert = require('assert');
 Feature('login');
 
-Scenario('test something',({ I }) => {
+Scenario('test something',async({ I }) => {
+let title = await I.grabTitle();
+assert.equal(title,'about:blank');  
 I.amOnPage('/index.html');
 I.fillField("Name","kuhu");
 I.fillField("Email","123@gmail.com");
@@ -18,5 +21,6 @@ I.click('Login');
 
 //pause();
 
-}).retry(2);
+});
+
 
