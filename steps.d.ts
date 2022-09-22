@@ -3,8 +3,8 @@ type steps_file = typeof import('./steps_file.js');
 
 declare namespace CodeceptJS {
   interface SupportObject { I: I, current: any }
-  interface Methods extends Puppeteer {}
-  interface I extends ReturnType<steps_file> {}
+  interface Methods extends REST, JSONResponse {}
+  interface I extends ReturnType<steps_file>, WithTranslation<JSONResponse> {}
   namespace Translation {
     interface Actions {}
   }
